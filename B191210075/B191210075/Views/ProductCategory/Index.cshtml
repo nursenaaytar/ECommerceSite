@@ -1,0 +1,104 @@
+﻿@{
+    Layout = "_LayoutAdminMenu";
+}
+@*@model ECommerceSite.Models.ProductCategoryViewModel*@
+@using ECommerceSite.Models
+@model List<ProductCategoryViewModel>
+
+
+@*@foreach(var item in Model)
+{
+    @item.CategoryName;
+}
+*@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+    table, td, th {  
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 15px;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="table-responsive-md">
+        <table class="table">
+          <tr>
+            <th>Kategori Id</th>
+            <th>Kategori Adı</th>
+            <th>Oluşturan</th>
+            <th>Oluşturulduğu Tarih</th>
+            <th>Düzenleyen</th>
+            <th>Düzenlendiği Tarih</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+          </tr>
+          @foreach(var item in Model)
+          {
+          <tr>
+            <td>@item.SqId</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Creater</td>
+            <td>@item.CreatedDate</td>
+            <td>@item.Modifier</td>
+            <td>@item.ModifiedDate</td>
+            <td><a href="#" class="btn btn-success">Güncelle</a></td>
+            <td><a href="#" class="btn btn-danger">Sil</a></td>
+          </tr>
+          }
+        </table>
+        </div>
+        <button id="btnSubmit" runat="server" class="myButton" onclick="openInsertCategoryModalFunc()">Hello</button>
+
+    </body>
+</html>
+
+
+<script>
+    $( document ).ready(function() {
+      $('#modalNewRecord').modal('hide');
+});
+    function openInsertCategoryModalFunc()
+    {
+      $('#modalNewRecord').modal('show');
+    }
+
+</script>
+
+@*<div id="modalNewRecord" class="modal modal-full fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Kart Siparişi</h4>
+                <button type="button" class="modal-close" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Ürün Kategorisi Ekleme</h4>
+                <p id="cardInfo">
+                </p>
+                <div class="row">
+                   
+                    <div class="col-lg-12">
+                        <b>Kategori Adı</b>
+                        @Html.TextBoxFor(x=>x.p)
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="fo-button-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" class="fo-button" onclick="acceptOrder()">Onay</button>
+            </div>
+        </div>
+    </div>
+</div>*@
