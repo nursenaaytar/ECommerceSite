@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ozlc1Wz+65HtRafqQKv8koW0YXL4COO7HsnTZJGYhbdZlsz83LirJd8RL5EtYq6rsFLOSZ1PiVHRoDCw/iQmtA==",
+  "dgSpecHash": "wjwNKMjp79mzosz2/6YVCqjhdcGzIg4JhUuyOcORfnBEHyBaFFk8qv7e+vg0KVDT0Xz4Jt6fAkpdGFfMtNqfBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aytar\\Desktop\\okul\\ders\\odevler\\webProgramlama\\B191210075\\B191210075\\ECommerceSite.csproj",
+  "projectFilePath": "C:\\Users\\aytar\\Desktop\\github\\ECommerceSite\\ECommerceSite\\B191210075\\B191210075\\ECommerceSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aytar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\aytar\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -52,13 +52,14 @@
             <td>@item.CreatedDate</td>
             <td>@item.Modifier</td>
             <td>@item.ModifiedDate</td>
-            <td><a href="#" class="btn btn-success">Güncelle</a></td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            <td><a href="/ProductCategory/GetProductCategory/@item.SqId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/ProductCategory/DeleteProductCategory/@item.SqId" class="btn btn-danger">Sil</a></td>
           </tr>
           }
         </table>
         </div>
-        <button id="btnSubmit" runat="server" class="myButton" onclick="openInsertCategoryModalFunc()">Hello</button>
+
+        <a href="/ProductCategory/NewProductCategory" class="btn btn-primary">Yeni Kategori</a>
 
     </body>
 </html>

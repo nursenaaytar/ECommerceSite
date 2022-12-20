@@ -1,0 +1,15 @@
+﻿@model ECommerceSite.Models.ProductCategoryViewModel
+
+@using(Html.BeginForm("UpdateProductCategory","ProductCategory", FormMethod.Post))
+{ 
+    <form class="form-group" method="post">
+        <b>Kategori Id</b>
+        @Html.TextBoxFor(x=>x.SqId,new {@class="form-control"})
+        <br />
+  
+        <b>Kategori Adı</b>
+        @Html.TextBoxFor(x=>x.CategoryName,new {@class="form-control"})
+        <br />
+        <button class="btn-primary" >Kategori Ekle</button>
+    </form>
+}

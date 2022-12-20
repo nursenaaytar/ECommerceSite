@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aytar\\Desktop\\okul\\ders\\odevler\\webProgramlama\\B191210075\\B191210075\\ECommerceSite.csproj": {}
+    "C:\\Users\\aytar\\Desktop\\github\\ECommerceSite\\ECommerceSite\\B191210075\\B191210075\\ECommerceSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aytar\\Desktop\\okul\\ders\\odevler\\webProgramlama\\B191210075\\B191210075\\ECommerceSite.csproj": {
+    "C:\\Users\\aytar\\Desktop\\github\\ECommerceSite\\ECommerceSite\\B191210075\\B191210075\\ECommerceSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aytar\\Desktop\\okul\\ders\\odevler\\webProgramlama\\B191210075\\B191210075\\ECommerceSite.csproj",
+        "projectUniqueName": "C:\\Users\\aytar\\Desktop\\github\\ECommerceSite\\ECommerceSite\\B191210075\\B191210075\\ECommerceSite.csproj",
         "projectName": "ECommerceSite",
-        "projectPath": "C:\\Users\\aytar\\Desktop\\okul\\ders\\odevler\\webProgramlama\\B191210075\\B191210075\\ECommerceSite.csproj",
+        "projectPath": "C:\\Users\\aytar\\Desktop\\github\\ECommerceSite\\ECommerceSite\\B191210075\\B191210075\\ECommerceSite.csproj",
         "packagesPath": "C:\\Users\\aytar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aytar\\Desktop\\okul\\ders\\odevler\\webProgramlama\\B191210075\\B191210075\\obj\\",
+        "outputPath": "C:\\Users\\aytar\\Desktop\\github\\ECommerceSite\\ECommerceSite\\B191210075\\B191210075\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aytar\\AppData\\Roaming\\NuGet\\NuGet.Config",
