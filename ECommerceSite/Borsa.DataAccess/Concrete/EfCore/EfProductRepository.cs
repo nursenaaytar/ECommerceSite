@@ -84,5 +84,28 @@ namespace Borsa.DataAccess.Concrete.EfCore
                 }
             }
         }
+
+        public List<Product> GetProductAndPrices()
+        {
+            using (var context = new BorsaContext())
+            {
+                var productsAndPrices = from n in context.Products.AsQueryable()
+                                        where n.Price > 3 && n.Price < 7
+                                             select n;
+                return productsAndPrices.ToList();
+            }
+        }
+
+        public List<Product> GetProductAndPricesWithParameters(int min,int max)
+        {
+            using (var context = new BorsaContext())
+            {
+                var productsAndPrices = from n in context.Products.AsQueryable()
+                                        where n.Price >min && n.Price < max
+                                       orderby n.Price descending
+                                        select n;
+                return productsAndPrices.ToList();
+            }
+        }
     }
 }

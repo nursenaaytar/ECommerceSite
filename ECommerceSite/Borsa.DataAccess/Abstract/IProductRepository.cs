@@ -15,5 +15,7 @@ namespace Borsa.DataAccess.Abstract
         int GetProductsByCategory(string category);
         Product GetByIdWithCategories(int id);
         void Update(Product entity, int[] categoryIds);
+        List<Product> GetProductAndPrices(); 
+        List<Product> GetProductAndPricesWithParameters(int min,int max);
     }
 }

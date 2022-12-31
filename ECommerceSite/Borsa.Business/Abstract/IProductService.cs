@@ -17,5 +17,7 @@ namespace Borsa.Business.Abstract
         int GetCountByCategory(string category);
         Product GetByIdWithCategories(int id);
         void Update(Product entity, int[] categoryIds);
+        List<Product> ApiGetProductAndPrices();
+        List<Product> ApiGetProductAndPricesWithParameters(int min, int max);
     }
 }

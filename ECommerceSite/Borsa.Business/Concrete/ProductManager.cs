@@ -84,6 +84,17 @@ namespace Borsa.Business.Concrete
             return isValid; 
         }
 
+        public List<Product> ApiGetProductAndPrices()
+        {
+            return _productrepo.GetProductAndPrices();
+        }
+
+        public List<Product> ApiGetProductAndPricesWithParameters(int min,int max)
+        {
+            return _productrepo.GetProductAndPricesWithParameters(min,max);
+        }
+
+
         public string ErorMessage { get; set; }
     }
 }
