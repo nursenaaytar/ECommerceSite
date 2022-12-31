@@ -54,8 +54,8 @@ namespace Borsa.WebUI.Controllers
                     userId = user.Id,
                     token = code
                 });
-                //sendemail
-                await _emailSender.SendEmailAsync(model.Email, "Confirm your account.", $"<a href ='https://localhost:44344{callbackUrl}'>Click on the link to confirm your mail account.</a>");
+               //sendemail
+                await _emailSender.SendEmailAsync(model.Email, "Confirm your account.", $"<a href ='https://localhost:44324{callbackUrl}'>Click on the link to confirm your mail account.</a>");
 
                 return RedirectToAction("Login", "Account");
             }

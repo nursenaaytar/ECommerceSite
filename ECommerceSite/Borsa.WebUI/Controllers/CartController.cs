@@ -266,6 +266,7 @@ namespace Borsa.WebUI.Controllers
                 basketItems.Add(basketItem);
             }
             request.BasketItems = basketItems;
+            var paran = Payment.Create(request, options);
             return Payment.Create(request, options);
         }
     }
