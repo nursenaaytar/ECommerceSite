@@ -146,5 +146,13 @@ namespace Borsa.WebUI.Controllers
 
             return View(model);
         }
+
+
+        //[HttpGet]
+        //public IEnumerable<Product> ProductsAndPrices()
+        //{
+        //    var productsAndPrices=from n in 
+        //    return productsAndPrices.toList();
+        //}
     }
 }
