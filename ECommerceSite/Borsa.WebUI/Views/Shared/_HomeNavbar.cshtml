@@ -1,12 +1,7 @@
 ﻿@inject LanguageService language
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/HomePage/Index">@language.Getkey("Home") <span class="sr-only">(current)</span></a>
+ <a class="nav-item nav-link active" href="/HomePage/Index">@language.Getkey("Home") <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="/HomePage/ProductList">@language.Getkey("Products")</a>
         @if (User.Identity.IsAuthenticated)
                     {
@@ -15,6 +10,17 @@
                     }
       <a class="nav-item nav-link" href="/HomePage/AboutUs">@language.Getkey("AboutUs")</a>
       <a class="nav-item nav-link" href="/Contact/Create">@language.Getkey("Contact")</a>
+
+
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        </ul>
       @if (User.Identity.IsAuthenticated)
                     {
                             <a class="nav-link " asp-area="" asp-controller="Customer" asp-action="Profile">@User.Identity.Name</a>
@@ -31,9 +37,7 @@
                             <a class="nav-link " asp-area="" asp-controller="Account" asp-action="Register">@language.Getkey("Register")</a>
                      
                     }
-    </div>
   </div>
-
 </nav>
 @*
 <div class="navigation-agileits">
