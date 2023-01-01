@@ -86,20 +86,21 @@ namespace Borsa.WebUI
 
             services.Configure<IdentityOptions>(options =>
             {
-                options.Password.RequireDigit = true;
-                options.Password.RequireLowercase = true;
-                options.Password.RequiredLength = 3;
-                options.Password.RequireNonAlphanumeric = true;
-                options.Password.RequireUppercase = true;
 
-                options.Lockout.MaxFailedAccessAttempts = 5;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(5);
-                options.Lockout.AllowedForNewUsers = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 1;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
 
-                options.User.RequireUniqueEmail = true;
+                //options.Lockout.MaxFailedAccessAttempts = 5;
+                //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(5);
+                //options.Lockout.AllowedForNewUsers = true;
 
-                options.SignIn.RequireConfirmedEmail = true;
-                options.SignIn.RequireConfirmedPhoneNumber = false;
+                //options.User.RequireUniqueEmail = true;
+
+                //options.SignIn.RequireConfirmedEmail = true;
+                //options.SignIn.RequireConfirmedPhoneNumber = false;
 
             });
 
