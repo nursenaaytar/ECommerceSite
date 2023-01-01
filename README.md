@@ -1,9 +1,10 @@
 # ECommerceSite
 Market siparişleri için oluşturulmuş E-Ticaret uygulamasıdır. 
 
-Kullanıclar ürün sipariş edebilir, sipariş edilen ürünleri gözlemleyebilir, isteklerini belirtebilirler.
-Adminler ürün kontrolleri (stok vb.) sağlayabilir, raporlama ekranlarından rapor görüntüleyebilir, kullanıcı isteklerine yanıt verebilirler.
+Kullanıcı kaydı sırasında mail doğrulaması gerekmektedir. Girilen mail adresine link gelmekte, linke tıklandıktan sonra login olunabilmektedir.
 
+Kullanıclar ürün sipariş edebilir (sipariş ödemelerinde iyzico apisi kullanılmıştır.), sipariş edilen ürünleri gözlemleyebilir, isteklerini belirtebilirler.
+Adminler ürün kontrolleri (stok vb.) sağlayabilir, raporlama ekranlarından rapor görüntüleyebilir, kullanıcı isteklerine yanıt verebilirler.
 
 Kullanılan teknolojiler:
 Asp.Net Core 6 MVC
