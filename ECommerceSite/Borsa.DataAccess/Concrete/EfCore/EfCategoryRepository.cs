@@ -17,6 +17,6 @@ namespace Borsa.DataAccess.Concrete.EfCore
             {
                 return context.Categories.Where(x => x.Id == id).Include(x => x.ProductCategories).ThenInclude(x => x.Product).FirstOrDefault();
             }
-        }
+        } 
     }
 }

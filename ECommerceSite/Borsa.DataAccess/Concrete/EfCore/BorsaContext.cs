@@ -26,5 +26,6 @@ namespace Borsa.DataAccess.Concrete.EfCore
         public DbSet<Campaign> Campaigns { get; set; }
         public DbSet<CustomerAddress> CustomerAddresses { get; set; }
         public DbSet<CustomerCard> CustomerCards { get; set; }
+        public DbSet<ProductCategory> ProductCategory { get; set; }
     }
 }

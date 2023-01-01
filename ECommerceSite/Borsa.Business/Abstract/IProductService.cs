@@ -19,5 +19,6 @@ namespace Borsa.Business.Abstract
         void Update(Product entity, int[] categoryIds);
         List<Product> ApiGetProductAndPrices();
         List<Product> ApiGetProductAndPricesWithParameters(int min, int max);
+        List<Product> ApiGetProductStock();
     }
 }

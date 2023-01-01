@@ -90,7 +90,6 @@ namespace Borsa.DataAccess.Concrete.EfCore
             using (var context = new BorsaContext())
             {
                 var productsAndPrices = from n in context.Products.AsQueryable()
-                                        where n.Price > 3 && n.Price < 7
                                              select n;
                 return productsAndPrices.ToList();
             }
@@ -103,6 +102,17 @@ namespace Borsa.DataAccess.Concrete.EfCore
                 var productsAndPrices = from n in context.Products.AsQueryable()
                                         where n.Price >min && n.Price < max
                                        orderby n.Price descending
+                                        select n;
+                return productsAndPrices.ToList();
+            }
+        }
+        public List<Product> GetProductProductStock()
+        {
+            using (var context = new BorsaContext())
+            {
+                var productsAndPrices = from n in context.Products.AsQueryable()
+                                        where n.Stock<0
+                                        orderby n.Stock descending
                                         select n;
                 return productsAndPrices.ToList();
             }

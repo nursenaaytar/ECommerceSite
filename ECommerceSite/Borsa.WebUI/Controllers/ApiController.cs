@@ -3,6 +3,7 @@ using Borsa.DataAccess.Concrete.EfCore;
 using Borsa.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Borsa.WebUI.Controllers
 {
@@ -20,17 +21,52 @@ namespace Borsa.WebUI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> ProductsAndPrices()
+        public JsonResult ProductsAndPrices()
         {
             var entity = _productService.ApiGetProductAndPrices();
-            return entity;
+            return Json(entity) ;
         }
 
         [HttpGet("{min}/{max}")]
-        public IEnumerable<Product> ProductsAndPricesWithParameters(int min, int max)
+        public JsonResult ProductsAndPricesWithParameters(int min, int max)
         {
             var entity = _productService.ApiGetProductAndPricesWithParameters(min,max);
-            return entity;
+            return Json(entity);
         }
+
+        [HttpGet]
+        public JsonResult ProductsStock()
+        {
+            var entity = _productService.ApiGetProductStock();
+            return Json(entity); 
+        }
+
+        [HttpDelete("{id}")]
+        public JsonResult Delete(int id)
+        {
+            var message = "";
+            using (var context = new BorsaContext())
+            {
+                var y1 = context.Categories.FirstOrDefault(x => x.Id == id);
+                if (y1 is null)
+                {
+                    message = "Kategori bulunamadı!";
+                }
+                var y2 = context.ProductCategory.FirstOrDefault(x => x.CategoryId == id);
+                if(y2 is not null)
+                {
+                    message = "Kategoriye bağlı ürünler var, kategori silinemez.";
+                }
+                if(message=="")
+                {
+                    context.Categories.Remove(y1);
+                    context.SaveChanges();
+                    message = "Başarılı";
+                }             
+                return  Json(message);
+            }
+             
+        }
+        
     }
 }

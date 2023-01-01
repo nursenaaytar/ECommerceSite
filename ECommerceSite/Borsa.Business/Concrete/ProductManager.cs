@@ -94,7 +94,10 @@ namespace Borsa.Business.Concrete
             return _productrepo.GetProductAndPricesWithParameters(min,max);
         }
 
-
+        public List<Product> ApiGetProductStock()
+        {
+            return _productrepo.GetProductProductStock();
+        }
         public string ErorMessage { get; set; }
     }
 }
